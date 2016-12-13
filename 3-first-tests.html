@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Refactored date examples</title>
+    <script src="prettydate.js"></script>
+    <script>
+    window.onload = function() {
+        var links = document.getElementsByTagName("a");
+        for ( var i = 0; i < links.length; i++ ) {
+            if (links[i].title) {
+                var date = prettyDate("2008-01-28T22:25:00Z", links[i].title);
+                if (date) {
+                    links[i].innerHTML = date;
+                }
+            }
+        }
+    };
+    </script>
+</head>
+<body>
+
+<ul>
+<li class="entry" id="post57">
+    <p>blah blah blah…</p>
+    <small class="extra">
+        Posted <a href="/2008/01/blah/57/" title="2008-01-28T20:24:17Z">January 28th, 2008</a>
+        by <a href="/john/">John Resig</a>
+    </small>
+</li>
+<!-- more list items -->
+</ul>
+
+</body>
+</html>
